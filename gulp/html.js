@@ -10,7 +10,7 @@ const pug = require('gulp-pug');
 const puglint = require('gulp-pug-linter');
 const typograf = require('gulp-typograf');
 
-const srcPath = 'src/html/pages/*.pug';
+const srcPath = 'src/pug/pages/*.pug';
 
 module.exports = function html(env='dev', version) {
     switch (env) {

@@ -25,7 +25,7 @@ function serve() {
 }
 
 function watching() {
-    watch('src/html/**/*.pug').on('change', series(html, browsersync.reload));
+    watch('src/pug/**/*.pug').on('change', series(html, browsersync.reload));
     watch('src/scss/**/*.scss').on('change', series(css, browsersync.reload));
     watch(['src/js/**/*.js', '!src/js/scripts.js']).on('change', series(js, browsersync.reload));
 }
