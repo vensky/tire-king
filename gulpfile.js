@@ -12,7 +12,7 @@ const js = () => require('./gulp/js')(env, version);
 const img = () => require('./gulp/img')(env);
 const font = () => require('./gulp/font')(env);
 const svg = require('./gulp/svg');
-const lighthouse = require('./gulp/tasks/lighthouse');
+const lighthouse = require('./gulp/lighthouse');
 
 function serve() {
     browsersync.init({
@@ -30,11 +30,10 @@ function watching() {
     watch(['src/js/**/*.js', '!src/js/scripts.js']).on('change', series(js, browsersync.reload));
 }
 
+module.exports.start = parallel(html, css, js, serve, watching);
+module.exports.test = parallel(html, css, js);
+module.exports.build = series(clean, html, css, js, img);
+
 module.exports.img = series(img);
 module.exports.svg = series(svg);
 module.exports.font = series(font);
-
-module.exports.ser = parallel(serve, watching);
-module.exports.start = parallel(html, css, js, serve);
-module.exports.test = parallel(html, css, js);
-module.exports.build = series(clean, html, css, js, img, );
