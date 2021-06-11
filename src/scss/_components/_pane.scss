@@ -1,0 +1,76 @@
+.pane {
+    margin-bottom: 20px;
+    width: 100%;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 5px;
+        width: 33.33%;
+    }
+
+    &__lang {
+        font-size: 12px;
+        line-height: 19px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+
+        span {
+            padding: 0 2px;
+        }
+    }
+
+    &__lang-link {
+        text-decoration: underline;
+        text-transform: uppercase;
+
+        &--current {
+            text-decoration: none;
+        }
+    }
+
+    &__social-link {
+        display: block;
+        background-image: url("../img/icon-facebook.svg");
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        background-size: 17px auto;
+        padding-left: 24px;
+        font-size: 0;
+        line-height: 19px;
+        text-transform: lowercase;
+
+        @media (min-width: 479px) {
+            font-size: 16px;
+        }
+    }
+
+    &__logo {
+        max-width: 344px;
+        min-width: 90px;
+        padding: 0 5px;
+        width: 33.33%;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    &__contacts {
+        padding-top: 5px;
+        font-size: 10px;
+        text-align: right;
+        width: 33.33%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        @media (min-width: 479px) {
+            font-size: 16px;
+        }
+    }
+}

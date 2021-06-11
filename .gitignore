@@ -49,4 +49,4 @@ bower_components
 # build
 dist
 src/assets
-src
+# src

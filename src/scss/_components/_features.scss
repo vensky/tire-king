@@ -1,0 +1,65 @@
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+
+    &__item {
+        text-align: center;
+        width: 25%;
+    }
+
+    &__img {
+        margin-bottom: 5px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 35px;
+            background-image: url("../img/icon-fire.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 56px;
+            left: calc(50% - 28px);
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.25s ease-out;
+        }
+
+        img {
+            position: relative;
+            margin: 0 auto;
+            max-width: 50%;
+        }
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+
+            .features__img::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 3vmin;
+        font-weight: 700;
+        letter-spacing: 0.045em;
+        text-transform: uppercase;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+
+        @media (min-width: 641px) {
+            font-size: 12px;
+        }
+    }
+}
