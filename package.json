@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "NODE_ENV=dev npx gulp start",
-    "img": "NODE_ENV=dev npx gulp img",
+    "imgmin": "NODE_ENV=dev npx gulp img",
     "test": "NODE_ENV=test npx gulp test",
     "build": "NODE_ENV=build npx gulp test && npx gulp build",
     "prepare": "husky install && npx husky add .husky/\"npm test\""

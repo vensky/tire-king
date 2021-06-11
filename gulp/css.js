@@ -24,7 +24,7 @@ module.exports = function css(env='dev', version) {
         break;
         case 'test':
             return multipipe(
-                src('src/scss/**/*.scss', { sourcemaps: true }),
+                src(['src/scss/**/*.scss', '!src/scss/_vars.scss', '!src/scss/_fonts.scss', '!src/scss/style.scss'], { sourcemaps: true }),
                 stylelint({
                     failAfterError: false,
                     reporters: [
