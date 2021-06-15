@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin: 0;
 }
 
@@ -59,10 +60,6 @@ body {
         padding: 0 25px;
         max-width: 600px;
     }
-/*
-    @media (min-width: 1024px) {
-        max-width: 1000px;
-    }*/
 }
 
 .section {
