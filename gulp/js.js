@@ -23,7 +23,7 @@ module.exports = function script(env='dev', version) {
             break;
         case 'test':
             return multipipe(
-                src(['src/js/**/*.js', '!src/js/scripts.js']),
+                src(['src/js/_components/**/*.js', '!src/js/_components/_swiper.js']),
                 eslint(),
                 eslint.format()
             );
