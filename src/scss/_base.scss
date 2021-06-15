@@ -34,6 +34,11 @@ img {
     border: 0;
 }
 
+button {
+    border: none;
+    padding: 0;
+}
+
 html {
     margin: 0;
 }
@@ -57,4 +62,8 @@ body {
     @media (min-width: 1024px) {
         max-width: 1000px;
     }
+}
+
+.section {
+    height: 100vh;
 }

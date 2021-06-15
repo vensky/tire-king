@@ -41,6 +41,7 @@
     "gulp-connect": "^5.7.0",
     "gulp-dart-sass": "^1.0.2",
     "gulp-eslint": "^6.0.0",
+    "gulp-file-include": "^2.3.0",
     "gulp-html-bem-validator": "^1.0.5",
     "gulp-html-replace": "^1.6.2",
     "gulp-htmlhint": "^4.0.1",
@@ -65,5 +66,8 @@
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-scss": "^3.19.0"
+  },
+  "dependencies": {
+    "swiper": "^6.7.0"
   }
 }
