@@ -23,22 +23,22 @@
             margin-bottom: 20px;
         }
 
-        span {
-            display: block;
-            font-size: 3vmin;
-            letter-spacing: 0.28em;
-        }
-
         h1 {
             font-weight: 700;
             font-size: 16vmin;
             line-height: 1;
         }
+    }
 
-        p {
-            font-size: 5vmin;
-            font-weight: 700;
-            letter-spacing: 0.045em;
-        }
+    &__overtitle {
+        display: block;
+        font-size: 3vmin;
+        letter-spacing: 0.28em;
+    }
+
+    &__subtitle {
+        font-size: 5vmin;
+        font-weight: 700;
+        letter-spacing: 0.045em;
     }
 }
