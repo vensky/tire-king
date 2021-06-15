@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
 }
 
@@ -57,13 +57,43 @@ body {
 
     @media (min-width: 768px) {
         padding: 0 25px;
+        max-width: 600px;
     }
-
+/*
     @media (min-width: 1024px) {
         max-width: 1000px;
-    }
+    }*/
 }
 
 .section {
     height: 100vh;
+
+    &--text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 8vmin;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 24px auto;
+
+        @media (min-width: 768px) {
+            margin: 60px auto;
+        }
+    }
+
+    &__text {
+        letter-spacing: 0.02;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    &__brand {
+        text-transform: uppercase;
+    }
 }

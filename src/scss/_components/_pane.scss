@@ -5,6 +5,10 @@
     &__container {
         display: flex;
         justify-content: space-between;
+
+        @media (min-width: 1024px) {
+            max-width: 1000px;
+        }
     }
 
     &__nav {
