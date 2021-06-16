@@ -14,12 +14,6 @@
         cursor: pointer;
         position: relative;
 
-        &:focus {
-            &::before {
-                transform: rotate(180deg);
-            }
-        }
-
         &::before {
             content: "";
             position: absolute;
@@ -30,7 +24,6 @@
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
             z-index: 1;
-            /*transform: translateY(-50%);*/
         }
     }
 
