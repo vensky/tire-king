@@ -40,8 +40,27 @@ button {
     padding: 0;
 }
 
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
 html {
     margin: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input,
+textarea,
+button,
+select {
+    border-radius: 0;
+    font: inherit;
 }
 
 body {
@@ -55,6 +74,7 @@ body {
 .container {
     margin: 0 auto;
     padding: 0 10px;
+    width: 80%;
 
     @media (min-width: 768px) {
         padding: 0 25px;

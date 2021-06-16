@@ -53,7 +53,7 @@
           </nav>
           <div class="pane__logo">
             <picture>
-              <source srcset="img/logo.webp" type="image/webp"><img width="90" src="img/logo.png" alt="Логотип Tire King">
+              <source srcset="img/logo.webp" type="image/webp"><img width="344" src="img/logo.png" alt="Логотип Tire King">
             </picture>
           </div>
           <ul class="pane__contacts">
@@ -83,41 +83,55 @@
         </ul>
       </div>
     </header>
-    <section class="section">
-      <div class="swiper-container">
-        <ul class="swiper-wrapper">
-          <li class="swiper-slide">
-            <picture>
-              <source srcset="img/slide-4.webp" type="image/webp"><img class="swiper-img" src="img/slide-4.jpg" alt="Ремонт колес">
-            </picture>
-          </li>
-          <li class="swiper-slide">
-            <picture>
-              <source srcset="img/slide-3.webp" type="image/webp"><img class="swiper-img" src="img/slide-3.jpg" alt="Замена колес">
-            </picture>
-          </li>
-          <li class="swiper-slide">
-            <picture>
-              <source srcset="img/slide-2.webp" type="image/webp"><img class="swiper-img" src="img/slide-2.jpg" alt="Балансировка колес">
-            </picture>
-          </li>
-          <li class="swiper-slide">
-            <picture>
-              <source srcset="img/slide-1.webp" type="image/webp"><img class="swiper-img" src="img/slide-1.jpg" alt="Хранение колес">
-            </picture>
-          </li>
-        </ul>
-        <div class="swiper-pagination"></div>
-        <button class="swiper-button-prev" type="button"></button>
-        <button class="swiper-button-next" type="button"></button>
-      </div>
-    </section>
     <section class="section section--text about">
       <div class="container">
         <h2 class="section__title">Кто мы</h2>
         <div class="section__text">
           <p><span class="section__brand" lang="en">Tire King</span>— техническое объединение топовых инженеров, мастеров и механиков, которые придут вам на помощь. Огромный опыт работы в ведущих сервисах и салонах позволяет нам гарантировать результат в сжатые сроки.</p>
         </div>
+      </div>
+    </section>
+    <section class="section task">
+      <div class="container">
+        <h2 class="section__title">Опишите задачу
+          <form class="form">
+            <fieldset class="form__group">
+              <div class="form__select-wrapper">
+                <select class="form__select">
+                  <option>Выберите услугу</option>
+                  <option>Отремонтировать</option>
+                  <option>Заменить</option>
+                  <option>Перебортовать</option>
+                  <option>Отбалансировать</option>
+                  <option>Взять на хранение</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset class="form__group">
+              <div class="form__select-wrapper">
+                <select class="form__select">
+                  <option>Когда нужно</option>
+                  <option>Вчера</option>
+                  <option>Сегодня</option>
+                  <option>Завтра</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset class="form__group">
+              <textarea class="form__textarea" placeholder="Опишите дополнительную информацию"></textarea>
+            </fieldset>
+            <fieldset class="form__group">
+              <input class="form__field" type="text" placeholder="Ваше имя" required>
+            </fieldset>
+            <fieldset class="form__group">
+              <input class="form__field" type="tel" placeholder="Телефон для связи" required>
+            </fieldset>
+            <fieldset class="form__group">
+              <input class="form__field" type="email" placeholder="Эл. почта" required>
+            </fieldset>
+            <button class="btn form__submit" type="button">Отправить</button>
+          </form>
+        </h2>
       </div>
     </section>
     <script src="js/scripts.js"></script>
