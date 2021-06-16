@@ -93,8 +93,9 @@
     </section>
     <section class="section task">
       <div class="container">
-        <h2 class="section__title">Опишите задачу
-          <form class="form">
+        <h2 class="section__title">Опишите задачу</h2>
+        <form class="form task-form">
+          <fieldset class="task-form__selects">
             <fieldset class="form__group">
               <div class="form__select-wrapper">
                 <select class="form__select">
@@ -117,9 +118,11 @@
                 </select>
               </div>
             </fieldset>
-            <fieldset class="form__group">
-              <textarea class="form__textarea" placeholder="Опишите дополнительную информацию"></textarea>
-            </fieldset>
+          </fieldset>
+          <fieldset class="form__group task-form__textarea">
+            <textarea class="form__textarea" placeholder="Опишите дополнительную информацию"></textarea>
+          </fieldset>
+          <fieldset class="task-form__inputs">
             <fieldset class="form__group">
               <input class="form__field" type="text" placeholder="Ваше имя" required>
             </fieldset>
@@ -129,9 +132,9 @@
             <fieldset class="form__group">
               <input class="form__field" type="email" placeholder="Эл. почта" required>
             </fieldset>
-            <button class="btn form__submit" type="button">Отправить</button>
-          </form>
-        </h2>
+          </fieldset>
+          <button class="btn form__submit" type="button">Отправить</button>
+        </form>
       </div>
     </section>
     <script src="js/scripts.js"></script>

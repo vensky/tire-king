@@ -1,3 +1,48 @@
 .task {
     color: $main-color;
 }
+
+.task-form {
+    &__selects {
+        width: 100%;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+
+            .form__group:first-child {
+                width: 60%;
+                margin-right: 2%;
+            }
+
+            .form__group:last-child {
+                width: 38%;
+            }
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+
+        @media (min-width: 1024px) {
+            .form__textarea {
+                min-height: 240px;
+            }
+        }
+    }
+
+    &__inputs {
+        width: 100%;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+
+            .form__group {
+                margin-left: 0;
+                margin-right: 0;
+                width: 32%;
+            }
+        }
+    }
+}

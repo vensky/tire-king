@@ -1,29 +1,31 @@
 section.section.task
     .container
         h2.section__title Опишите задачу
-        form.form
-            fieldset.form__group
-                .form__select-wrapper
-                    select.form__select
-                        option Выберите услугу
-                        option Отремонтировать
-                        option Заменить
-                        option Перебортовать
-                        option Отбалансировать
-                        option Взять на хранение
-            fieldset.form__group
-                .form__select-wrapper
-                    select.form__select
-                        option Когда нужно
-                        option Вчера
-                        option Сегодня
-                        option Завтра
-            fieldset.form__group
+        form.form.task-form
+            fieldset.task-form__selects
+                fieldset.form__group
+                    .form__select-wrapper
+                        select.form__select
+                            option Выберите услугу
+                            option Отремонтировать
+                            option Заменить
+                            option Перебортовать
+                            option Отбалансировать
+                            option Взять на хранение
+                fieldset.form__group
+                    .form__select-wrapper
+                        select.form__select
+                            option Когда нужно
+                            option Вчера
+                            option Сегодня
+                            option Завтра
+            fieldset.form__group.task-form__textarea
                 textarea.form__textarea(placeholder="Опишите дополнительную информацию")
-            fieldset.form__group
-                input.form__field(type="text" placeholder="Ваше имя" required)
-            fieldset.form__group
-                input.form__field(type="tel" placeholder="Телефон для связи" required)
-            fieldset.form__group
-                input.form__field(type="email" placeholder="Эл. почта" required)
+            fieldset.task-form__inputs
+                fieldset.form__group
+                    input.form__field(type="text" placeholder="Ваше имя" required)
+                fieldset.form__group
+                    input.form__field(type="tel" placeholder="Телефон для связи" required)
+                fieldset.form__group
+                    input.form__field(type="email" placeholder="Эл. почта" required)
             button.btn.form__submit(type="button") Отправить
