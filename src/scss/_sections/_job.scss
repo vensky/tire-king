@@ -1,0 +1,9 @@
+.job {
+    background-color: #000;
+    color: #fff;
+
+    &__contacts {
+        font-size: $font-size-root;
+        text-align: center;
+    }
+}

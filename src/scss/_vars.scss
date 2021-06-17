@@ -2,9 +2,9 @@ $font-stack-sans-serif: PT Sans, "Segoe UI", Roboto, "Helvetica Neue", Helvetica
 $font-stack-serif: Georgia, Times, "Times New Roman", serif;
 
 $font-family-base: $font-stack-sans-serif;
-$font-size-root: 12px;
+$font-size-root: 18px;
 
-$font-base: 400 18px/1.5 $font-stack-sans-serif;
+$font-base: 400 $font-size-root $font-stack-sans-serif;
 
 $main-color: #ff0000;
 

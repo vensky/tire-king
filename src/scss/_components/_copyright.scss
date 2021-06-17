@@ -1,0 +1,15 @@
+.copyright {
+    font-size: 14px;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-transform: uppercase;
+
+    b {
+        font-weight: 700;
+    }
+
+    @media (min-width: 640px) {
+        text-align: left;
+    }
+}

@@ -1,0 +1,14 @@
+.contacts {
+    font-size: 10px;
+    text-align: right;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    @media (min-width: 480px) {
+        font-size: 16px;
+    }
+
+    &__link:hover {
+        text-decoration: none;
+    }
+}

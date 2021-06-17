@@ -44,28 +44,27 @@
     <meta name="twitter:image:alt" content="img/logo.png">
   </head>
   <body>
-    <header class="header">
-      <div class="pane">
-        <div class="container pane__container">
-          <nav class="pane__nav">
-            <div class="pane__lang"><a class="pane__lang-link pane__lang-link--current" href="/">Ru</a><span>/</span><a class="pane__lang-link" href="/en">En</a></div>
-            <div class="pane__social"><a class="pane__social-link" href="#" target="_blank" rel="noopener">Будь с нами</a></div>
+    <intro class="intro">
+      <header class="header">
+        <div class="container header__container">
+          <nav class="header__nav header__container-col">
+            <div class="lang header__lang"><a class="lang__link lang__link--current" href="/" lang="en">Ru</a><span>/</span><a class="lang__link" href="/en" lang="en">En</a></div><a class="social-link" href="#" target="_blank" rel="noopener">Будь с нами</a>
           </nav>
-          <div class="pane__logo">
+          <div class="header__logo header__container-col">
             <picture>
               <source srcset="img/logo.webp" type="image/webp"><img width="344" src="img/logo.png" alt="Логотип Tire King">
             </picture>
           </div>
-          <ul class="pane__contacts">
-            <li><a class="pane__contacts-link" href="tel:+74959009090">+7 495 900-90-90</a></li>
-            <li><a class="pane__contacts-link" href="email:info@tireking.com?subject=From%20tireking.com">info@tireking.com</a></li>
+          <ul class="contacts header__contacts header__container-col">
+            <li><a class="contacts__link" href="tel:+74959009090">+7 495 900-90-90</a></li>
+            <li><a class="contacts__link" href="email:info@tireking.com?subject=From%20tireking.com">info@tireking.com</a></li>
           </ul>
         </div>
-      </div>
-      <div class="container header__container">
-        <div class="header__title">
-          <h1><span class="header__overtitle">Шиномонтаж нового поколения</span><span lang="en">Tire King</span></h1>
-          <p class="header__subtitle">Быстро. Надежно.</p>
+      </header>
+      <div class="container intro__container">
+        <div class="intro__title">
+          <h1><span class="intro__overtitle">Шиномонтаж нового поколения</span><span lang="en">Tire King</span></h1>
+          <p class="intro__subtitle">Быстро. Надежно.</p>
         </div>
         <ul class="features">
           <li class="features__item"><a class="features__link" href="#form">
@@ -82,7 +81,36 @@
               <div class="features__title">Хранение</div></a></li>
         </ul>
       </div>
-    </header>
+    </intro>
+    <section class="section slider">
+      <div class="swiper-container">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <picture>
+              <source srcset="img/slide-4.webp" type="image/webp"><img class="swiper-img" src="img/slide-4.jpg" alt="Ремонт колес">
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <source srcset="img/slide-3.webp" type="image/webp"><img class="swiper-img" src="img/slide-3.jpg" alt="Замена колес">
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <source srcset="img/slide-2.webp" type="image/webp"><img class="swiper-img" src="img/slide-2.jpg" alt="Балансировка колес">
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <source srcset="img/slide-1.webp" type="image/webp"><img class="swiper-img" src="img/slide-1.jpg" alt="Хранение колес">
+            </picture>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+        <button class="swiper-button-prev" type="button"></button>
+        <button class="swiper-button-next" type="button"></button>
+      </div>
+    </section>
     <section class="section section--text about">
       <div class="container">
         <h2 class="section__title">Кто мы</h2>
@@ -119,8 +147,10 @@
               </div>
             </fieldset>
           </fieldset>
-          <fieldset class="form__group task-form__textarea">
-            <textarea class="form__textarea" placeholder="Опишите дополнительную информацию"></textarea>
+          <fieldset class="task-form__textarea">
+            <fieldset class="form__group">
+              <textarea class="form__textarea" placeholder="Опишите дополнительную информацию"></textarea>
+            </fieldset>
           </fieldset>
           <fieldset class="task-form__inputs">
             <fieldset class="form__group">
@@ -137,6 +167,22 @@
         </form>
       </div>
     </section>
+    <section class="section section--text job">
+      <div class="container">
+        <h2 class="section__title">Работа у нас</h2>
+        <div class="section__text">
+          <p><span class="section__brand" lang="en">Tire King</span>— это шиномонтаж следующего поколения. Зарабатывай сколько хочешь, когда хочешь, где хочешь. Моментальная оплата работы после сдачи, никаких затянутых проектов, мы — это UBER на рынке автосервисов.</p>
+          <p>Если ты опытный мастер, слесарь, мастер-приемщик или инженер — напиши на почту и начинай работать с нами.</p>
+          <p class="contacts job__contacts"><a class="contacts__link" href="email:job@tireking.com?subject=From%20tireking.com">job@tireking.com</a></p>
+        </div>
+      </div>
+    </section>
     <script src="js/scripts.js"></script>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="copyright footer__copyright"><b>© 2015 — 2021 Tire King.</b> Шиномонтаж нового поколения</div>
+        <div class="feedback"><a class="feedback__link" href="email:feedback@tireking.com?subject=From%20tireking.com">Обратая связь</a></div>
+      </div>
+    </footer>
   </body>
 </html>

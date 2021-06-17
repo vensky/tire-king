@@ -1,0 +1,24 @@
+.feedback {
+    background-image: url("../img/icon-mail.svg");
+    background-size: auto 21px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding-left: 30px;
+    font-size: 14px;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    &__link {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+
+    @media (min-width: 640px) {
+        text-align: right;
+    }
+}

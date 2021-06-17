@@ -1,0 +1,15 @@
+.social-link{
+    display: block;
+    background-image: url("../img/icon-facebook.svg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 17px auto;
+    padding-left: 24px;
+    font-size: 0;
+    line-height: 17px;
+    text-transform: lowercase;
+
+    @media (min-width: 640px) {
+        font-size: 16px;
+    }
+}

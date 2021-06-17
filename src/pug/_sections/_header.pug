@@ -1,47 +1,17 @@
 header.header
-    .pane
-        .container.pane__container
-            nav.pane__nav
-                .pane__lang
-                    a.pane__lang-link.pane__lang-link--current(href="/") Ru
-                    span /
-                    a.pane__lang-link(href="/en") En
-                .pane__social
-                    a.pane__social-link(href="#" target="_blank" rel="noopener") Будь с нами
-            .pane__logo
-                picture
-                    source(srcset="img/logo.webp" type="image/webp")
-                    img(width="344" src="img/logo.png" alt="Логотип Tire King")
-            ul.pane__contacts
-                li
-                    a.pane__contacts-link(href="tel:+74959009090") +7 (495) 900-90-90
-                li
-                    a.pane__contacts-link(href="email:info@tireking.com?subject=From%20tireking.com") info@tireking.com
     .container.header__container
-        .header__title
-            h1
-                span.header__overtitle Шиномонтаж нового поколения
-                span(lang="en") Tire King
-            p.header__subtitle Быстро. Надежно.
-        ul.features
-            li.features__item
-                a.features__link(href="#form")
-                    .features__img
-                        img(src="img/feature-repair.svg" alt="")
-                    .features__title Ремонт
-            li.features__item
-                a.features__link(href="#form")
-                    .features__img
-                        img(src="img/feature-change.svg" alt="")
-                    .features__title Замена
-            li.features__item
-               a.features__link(href="#form")
-                    .features__img
-                        img(src="img/feature-balance.svg" alt="")
-                    .features__title Балансировка
-            li.features__item
-                a.features__link(href="#form")
-                    .features__img
-                        img(src="img/feature-storage.svg" alt="")
-                    .features__title Хранение
-
+        nav.header__nav.header__container-col
+            .lang.header__lang
+                a.lang__link.lang__link--current(href="/" lang="en") Ru
+                span /
+                a.lang__link(href="/en" lang="en") En
+            a.social-link(href="#" target="_blank" rel="noopener") Будь с нами
+        .header__logo.header__container-col
+            picture
+                source(srcset="img/logo.webp" type="image/webp")
+                img(width="344" src="img/logo.png" alt="Логотип Tire King")
+        ul.contacts.header__contacts.header__container-col
+            li
+                a.contacts__link(href="tel:+74959009090") +7 (495) 900-90-90
+            li
+                a.contacts__link(href="email:info@tireking.com?subject=From%20tireking.com") info@tireking.com

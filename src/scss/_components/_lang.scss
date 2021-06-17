@@ -1,0 +1,21 @@
+.lang {
+    font-size: 12px;
+
+    span {
+        padding: 0 2px;
+    }
+
+    &__link {
+        text-decoration: underline;
+        text-transform: uppercase;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &--current {
+            opacity: 0.4;
+            text-decoration: none;
+        }
+    }
+}
