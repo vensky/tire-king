@@ -8,7 +8,7 @@ const clean = require('gulp-clean-css');
 const sass = require('gulp-dart-sass');
 const stylelint = require('gulp-stylelint');
 
-module.exports = function css(env='dev', version) {
+module.exports = function css(env, version) {
     switch (env) {
         case 'dev':
             return multipipe(

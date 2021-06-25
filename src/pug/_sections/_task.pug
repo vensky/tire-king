@@ -1,32 +1,42 @@
-section.section.task
+section.section.task#task
     .container
-        h2.section__title Опишите задачу
+        h2.section__title Какая задача
         form.form.task-form
-            fieldset.task-form__selects
-                fieldset.form__group
-                    .form__select-wrapper
-                        select.form__select
+            fieldset.task-form__cols.task-form__cols--double
+                fieldset.field.task-form__group
+                    span.field__label(id="service") Выбирите услугу
+                    div.field__select
+                        select.field__input(name="service" aria-labelledby="service")
                             option Выберите услугу
                             option Отремонтировать
                             option Заменить
                             option Перебортовать
                             option Отбалансировать
                             option Взять на хранение
-                fieldset.form__group
-                    .form__select-wrapper
-                        select.form__select
+                        div(aria-hidden="true").field__input.field__input--select
+                fieldset.field.task-form__group
+                    span.field__label(id="deadline") Выбирите услугу
+                    div.field__select
+                        select.field__input(name="deadline" aria-labelledby="deadline")
                             option Когда нужно
                             option Вчера
                             option Сегодня
                             option Завтра
-            fieldset.task-form__textarea
-                fieldset.form__group
-                    textarea.form__textarea(placeholder="Опишите дополнительную информацию")
-            fieldset.task-form__inputs
-                fieldset.form__group
-                    input.form__field(type="text" placeholder="Ваше имя" required)
-                fieldset.form__group
-                    input.form__field(type="tel" placeholder="Телефон для связи" required)
-                fieldset.form__group
-                    input.form__field(type="email" placeholder="Эл. почта" required)
-            button.btn.form__submit(type="button") Отправить
+                        div(aria-hidden="true").field__input.field__input--select
+            fieldset.field.task-form__group
+                label.field__label(for="textarea") Дополнительная информация
+                textarea.field__input.field__input--textarea(id="textarea" name="textarea" placeholder="Опишите дополнительную информацию")
+            fieldset.task-form__cols.task-form__cols--triple
+                fieldset.field.task-form__group
+                    label.field__label(for="name") Дополнительная информация
+                    input.field__input(id="name" name="name" type="text" placeholder="Ваше имя" aria-describedby="field__message--text")
+                    div.field__message.field__message--hidden#field__message--text Введите имя
+                fieldset.field.task-form__group
+                    label.field__label(for="tel") Дополнительная информация
+                    input.field__input(id="tel" name="tel" type="tel" placeholder="Телефон для связи" aria-describedby="field__message--tel")
+                    div.field__message.field__message--hidden#field__message--tel Введите телефон
+                fieldset.field.task-form__group
+                    label.field__label(for="email") Дополнительная информация
+                    input.field__input(id="email" name="email" type="email" placeholder="Эл. почта" aria-describedby="field__message--email")
+                    div.field__message.field__message--hidden#field__message--email Введите эл.почту
+            button.btn.form__submit.task-form__submit(type="button") Отправить

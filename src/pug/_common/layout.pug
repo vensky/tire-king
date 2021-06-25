@@ -3,7 +3,11 @@ html(lang="ru" prefix="og: http://ogp.me/ns#")
     head
         include _head
     body
-        block content
+        include ../_sections/_intro
+        main
+            block content
+        // build:js
         script(src="js/scripts.js")
+        // endbuild
         include ../_sections/_footer
 

@@ -44,9 +44,9 @@
     <meta name="twitter:image:alt" content="img/logo.png">
   </head>
   <body>
-    <intro class="intro">
-      <header class="header">
-        <div class="container header__container">
+    <header class="intro">
+      <section class="header">
+        <div class="container container--large header__container">
           <nav class="header__nav header__container-col">
             <div class="lang header__lang"><a class="lang__link lang__link--current" href="/" lang="en">Ru</a><span>/</span><a class="lang__link" href="/en" lang="en">En</a></div><a class="social-link" href="#" target="_blank" rel="noopener">Будь с нами</a>
           </nav>
@@ -60,128 +60,137 @@
             <li><a class="contacts__link" href="email:info@tireking.com?subject=From%20tireking.com">info@tireking.com</a></li>
           </ul>
         </div>
-      </header>
+      </section>
       <div class="container intro__container">
         <div class="intro__title">
           <h1><span class="intro__overtitle">Шиномонтаж нового поколения</span><span lang="en">Tire King</span></h1>
           <p class="intro__subtitle">Быстро. Надежно.</p>
         </div>
         <ul class="features">
-          <li class="features__item"><a class="features__link" href="#form">
+          <li class="features__item"><a class="features__link" href="#task">
               <div class="features__img"><img src="img/feature-repair.svg" alt=""></div>
               <div class="features__title">Ремонт</div></a></li>
-          <li class="features__item"><a class="features__link" href="#form">
+          <li class="features__item"><a class="features__link" href="#task">
               <div class="features__img"><img src="img/feature-change.svg" alt=""></div>
               <div class="features__title">Замена</div></a></li>
-          <li class="features__item"><a class="features__link" href="#form">
+          <li class="features__item"><a class="features__link" href="#task">
               <div class="features__img"><img src="img/feature-balance.svg" alt=""></div>
               <div class="features__title">Балансировка</div></a></li>
-          <li class="features__item"><a class="features__link" href="#form">
+          <li class="features__item"><a class="features__link" href="#task">
               <div class="features__img"><img src="img/feature-storage.svg" alt=""></div>
               <div class="features__title">Хранение</div></a></li>
         </ul>
       </div>
-    </intro>
-    <section class="section slider">
-      <div class="swiper-container">
-        <ul class="swiper-wrapper">
-          <li class="swiper-slide">
-            <picture>
-              <source srcset="img/slide-4.webp" type="image/webp"><img class="swiper-img" src="img/slide-4.jpg" alt="Ремонт колес">
-            </picture>
-          </li>
-          <li class="swiper-slide">
-            <picture>
-              <source srcset="img/slide-3.webp" type="image/webp"><img class="swiper-img" src="img/slide-3.jpg" alt="Замена колес">
-            </picture>
-          </li>
-          <li class="swiper-slide">
-            <picture>
-              <source srcset="img/slide-2.webp" type="image/webp"><img class="swiper-img" src="img/slide-2.jpg" alt="Балансировка колес">
-            </picture>
-          </li>
-          <li class="swiper-slide">
-            <picture>
-              <source srcset="img/slide-1.webp" type="image/webp"><img class="swiper-img" src="img/slide-1.jpg" alt="Хранение колес">
-            </picture>
-          </li>
-        </ul>
-        <div class="swiper-pagination"></div>
-        <button class="swiper-button-prev" type="button"></button>
-        <button class="swiper-button-next" type="button"></button>
-      </div>
-    </section>
-    <section class="section section--text about">
-      <div class="container">
-        <h2 class="section__title">Кто мы</h2>
-        <div class="section__text">
-          <p><span class="section__brand" lang="en">Tire King</span>— техническое объединение топовых инженеров, мастеров и механиков, которые придут вам на помощь. Огромный опыт работы в ведущих сервисах и салонах позволяет нам гарантировать результат в сжатые сроки.</p>
+    </header>
+    <main>
+      <section class="section slider">
+        <div class="swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <picture>
+                <source srcset="img/slide-4.webp" type="image/webp"><img class="swiper-img" src="img/slide-4.jpg" alt="Ремонт колес">
+              </picture>
+            </li>
+            <li class="swiper-slide">
+              <picture>
+                <source srcset="img/slide-3.webp" type="image/webp"><img class="swiper-img" src="img/slide-3.jpg" alt="Замена колес">
+              </picture>
+            </li>
+            <li class="swiper-slide">
+              <picture>
+                <source srcset="img/slide-2.webp" type="image/webp"><img class="swiper-img" src="img/slide-2.jpg" alt="Балансировка колес">
+              </picture>
+            </li>
+            <li class="swiper-slide">
+              <picture>
+                <source srcset="img/slide-1.webp" type="image/webp"><img class="swiper-img" src="img/slide-1.jpg" alt="Хранение колес">
+              </picture>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+          <button class="swiper-button-prev" type="button"></button>
+          <button class="swiper-button-next" type="button"></button>
         </div>
-      </div>
-    </section>
-    <section class="section task">
-      <div class="container">
-        <h2 class="section__title">Опишите задачу</h2>
-        <form class="form task-form">
-          <fieldset class="task-form__selects">
-            <fieldset class="form__group">
-              <div class="form__select-wrapper">
-                <select class="form__select">
-                  <option>Выберите услугу</option>
-                  <option>Отремонтировать</option>
-                  <option>Заменить</option>
-                  <option>Перебортовать</option>
-                  <option>Отбалансировать</option>
-                  <option>Взять на хранение</option>
-                </select>
-              </div>
-            </fieldset>
-            <fieldset class="form__group">
-              <div class="form__select-wrapper">
-                <select class="form__select">
-                  <option>Когда нужно</option>
-                  <option>Вчера</option>
-                  <option>Сегодня</option>
-                  <option>Завтра</option>
-                </select>
-              </div>
-            </fieldset>
-          </fieldset>
-          <fieldset class="task-form__textarea">
-            <fieldset class="form__group">
-              <textarea class="form__textarea" placeholder="Опишите дополнительную информацию"></textarea>
-            </fieldset>
-          </fieldset>
-          <fieldset class="task-form__inputs">
-            <fieldset class="form__group">
-              <input class="form__field" type="text" placeholder="Ваше имя" required>
-            </fieldset>
-            <fieldset class="form__group">
-              <input class="form__field" type="tel" placeholder="Телефон для связи" required>
-            </fieldset>
-            <fieldset class="form__group">
-              <input class="form__field" type="email" placeholder="Эл. почта" required>
-            </fieldset>
-          </fieldset>
-          <button class="btn form__submit" type="button">Отправить</button>
-        </form>
-      </div>
-    </section>
-    <section class="section section--text job">
-      <div class="container">
-        <h2 class="section__title">Работа у нас</h2>
-        <div class="section__text">
-          <p><span class="section__brand" lang="en">Tire King</span>— это шиномонтаж следующего поколения. Зарабатывай сколько хочешь, когда хочешь, где хочешь. Моментальная оплата работы после сдачи, никаких затянутых проектов, мы — это UBER на рынке автосервисов.</p>
-          <p>Если ты опытный мастер, слесарь, мастер-приемщик или инженер — напиши на почту и начинай работать с нами.</p>
-          <p class="contacts job__contacts"><a class="contacts__link" href="email:job@tireking.com?subject=From%20tireking.com">job@tireking.com</a></p>
+      </section>
+      <section class="section about">
+        <div class="container">
+          <h2 class="section__title">Кто мы</h2>
+          <div class="section__text">
+            <p><span class="section__brand" lang="en">Tire King</span>— техническое объединение топовых инженеров, мастеров и механиков, которые придут вам на помощь. Огромный опыт работы в ведущих сервисах и салонах позволяет нам гарантировать результат в сжатые сроки.</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="section task" id="task">
+        <div class="container">
+          <h2 class="section__title">Какая задача</h2>
+          <form class="form task-form">
+            <fieldset class="task-form__cols task-form__cols--double">
+              <fieldset class="field task-form__group"><span class="field__label" id="service">Выбирите услугу</span>
+                <div class="field__select">
+                  <select class="field__input" name="service" aria-labelledby="service">
+                    <option>Выберите услугу</option>
+                    <option>Отремонтировать</option>
+                    <option>Заменить</option>
+                    <option>Перебортовать</option>
+                    <option>Отбалансировать</option>
+                    <option>Взять на хранение</option>
+                  </select>
+                  <div class="field__input field__input--select" aria-hidden="true"></div>
+                </div>
+              </fieldset>
+              <fieldset class="field task-form__group"><span class="field__label" id="deadline">Выбирите услугу</span>
+                <div class="field__select">
+                  <select class="field__input" name="deadline" aria-labelledby="deadline">
+                    <option>Когда нужно</option>
+                    <option>Вчера</option>
+                    <option>Сегодня</option>
+                    <option>Завтра</option>
+                  </select>
+                  <div class="field__input field__input--select" aria-hidden="true"></div>
+                </div>
+              </fieldset>
+            </fieldset>
+            <fieldset class="field task-form__group">
+              <label class="field__label" for="textarea">Дополнительная информация</label>
+              <textarea class="field__input field__input--textarea" id="textarea" name="textarea" placeholder="Опишите дополнительную информацию"></textarea>
+            </fieldset>
+            <fieldset class="task-form__cols task-form__cols--triple">
+              <fieldset class="field task-form__group">
+                <label class="field__label" for="name">Дополнительная информация</label>
+                <input class="field__input" id="name" name="name" type="text" placeholder="Ваше имя" aria-describedby="field__message--text">
+                <div class="field__message field__message--hidden" id="field__message--text">Введите имя</div>
+              </fieldset>
+              <fieldset class="field task-form__group">
+                <label class="field__label" for="tel">Дополнительная информация</label>
+                <input class="field__input" id="tel" name="tel" type="tel" placeholder="Телефон для связи" aria-describedby="field__message--tel">
+                <div class="field__message field__message--hidden" id="field__message--tel">Введите телефон</div>
+              </fieldset>
+              <fieldset class="field task-form__group">
+                <label class="field__label" for="email">Дополнительная информация</label>
+                <input class="field__input" id="email" name="email" type="email" placeholder="Эл. почта" aria-describedby="field__message--email">
+                <div class="field__message field__message--hidden" id="field__message--email">Введите эл.почту</div>
+              </fieldset>
+            </fieldset>
+            <button class="btn form__submit task-form__submit" type="button">Отправить</button>
+          </form>
+        </div>
+      </section>
+      <section class="section job">
+        <div class="container">
+          <h2 class="section__title">Работа у нас</h2>
+          <div class="section__text">
+            <p><span class="section__brand" lang="en">Tire King</span>— это шиномонтаж следующего поколения. Зарабатывай сколько хочешь, когда хочешь, где хочешь. Моментальная оплата работы после сдачи, никаких затянутых проектов, мы — это UBER на рынке автосервисов.</p>
+            <p>Если ты опытный мастер, слесарь, мастер-приемщик или инженер — напиши на почту и начинай работать с нами.</p>
+            <p class="contacts job__contacts"><a class="contacts__link" href="email:job@tireking.com?subject=From%20tireking.com">job@tireking.com</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="js/scripts.js"></script>
     <footer class="footer">
-      <div class="container footer__container">
+      <div class="container container--large footer__container">
         <div class="copyright footer__copyright"><b>© 2015 — 2021 Tire King.</b> Шиномонтаж нового поколения</div>
-        <div class="feedback"><a class="feedback__link" href="email:feedback@tireking.com?subject=From%20tireking.com">Обратая связь</a></div>
+        <div class="feedback"><a class="feedback__link" href="email:feedback@tireking.com?subject=From%20tireking.com">Обратная связь</a></div>
       </div>
     </footer>
   </body>

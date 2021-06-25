@@ -4,10 +4,10 @@ const multipipe = require('multipipe');
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 
-module.exports = function fonts(env='dev') {
+module.exports = function fonts(env) {
     if (env === 'build') {
         return multipipe(
-            src('src/fonts'),
+            src('src/fonts/*.*'),
             dest('build/fonts')
         );
     }

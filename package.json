@@ -4,10 +4,10 @@
   "description": "Landing Tire King",
   "main": "index.html",
   "scripts": {
-    "start": "NODE_ENV=dev npx gulp start",
-    "imgmin": "NODE_ENV=dev npx gulp img",
-    "test": "NODE_ENV=test npx gulp test",
-    "build": "NODE_ENV=build npx gulp test && npx gulp build",
+    "start": "export NODE_ENV=dev npx gulp start",
+    "imgmin": "export NODE_ENV=dev npx gulp img",
+    "test": "export NODE_ENV=test npx gulp test",
+    "build": "export NODE_ENV=build && npx gulp build",
     "prepare": "husky install && npx husky add .husky/\"npm test\""
   },
   "repository": {

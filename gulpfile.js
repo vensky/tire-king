@@ -11,6 +11,7 @@ const css = () => require('./gulp/css')(env, version);
 const js = () => require('./gulp/js')(env, version);
 const img = () => require('./gulp/img')(env);
 const font = () => require('./gulp/font')(env);
+const favicon = () => require('./gulp/favicon')(env);
 const svg = require('./gulp/svg');
 const lighthouse = require('./gulp/lighthouse');
 
@@ -32,7 +33,7 @@ function watching() {
 
 module.exports.start = parallel(html, css, js, serve, watching);
 module.exports.test = parallel(html, css, js);
-module.exports.build = series(clean, html, css, js, img);
+module.exports.build = series(clean, html, css, js, img, favicon, font);
 
 module.exports.img = series(img);
 module.exports.svg = series(svg);

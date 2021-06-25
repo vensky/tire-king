@@ -5,11 +5,6 @@
     &__container {
         display: flex;
         justify-content: space-between;
-        width: 100%;
-
-        @media (min-width: 1024px) {
-            max-width: 1000px;
-        }
     }
 
     &__container-col {

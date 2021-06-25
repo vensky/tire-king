@@ -5,7 +5,8 @@ const newer = require('gulp-newer');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 
-module.exports = function img(env='dev') {
+module.exports = function img(env) {
+
     if (env === 'dev') {
         return multipipe(
             src(['src/assets/*.{jpg,jpeg,png}', '!src/assets/icons/*.svg']),
@@ -28,7 +29,7 @@ module.exports = function img(env='dev') {
             )
     }
     return multipipe(
-        src(['src/*.{jpg,jpeg,png,gif,svg,webp}', '!src/assets/icons/**/*.svg']),
-        dest('build/img'),
+        src(['src/img/*.{jpg,jpeg,png,gif,svg,webp}', '!src/assets/icons/**/*.svg']),
+        dest('build/img')
     )
 }

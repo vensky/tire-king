@@ -3,46 +3,40 @@
 }
 
 .task-form {
-    &__selects {
-        width: 100%;
+    display: flex;
+    flex-direction: column;
 
-        @media (min-width: 1024px) {
+    &__group {
+        margin-bottom: 10px;
+    }
+
+    &__cols {
+
+        @media (min-width: $tablet) {
             display: flex;
             justify-content: space-between;
+        }
 
-            .form__group:first-child {
-                width: 60%;
-                margin-right: 2%;
+        &--double {
+
+            @media (min-width: $tablet) {
+                .task-form__group {
+                    width: 49%;
+                }
             }
+        }
 
-            .form__group:last-child {
-                width: 38%;
+        &--triple {
+
+            @media (min-width: $tablet) {
+                .task-form__group {
+                    width: 32%;
+                }
             }
         }
     }
 
-    &__textarea {
-        width: 100%;
-
-        @media (min-width: 1024px) {
-            .form__textarea {
-                min-height: 240px;
-            }
-        }
-    }
-
-    &__inputs {
-        width: 100%;
-
-        @media (min-width: 1024px) {
-            display: flex;
-            justify-content: space-between;
-
-            .form__group {
-                margin-left: 0;
-                margin-right: 0;
-                width: 32%;
-            }
-        }
+    &__submit {
+        margin-top: 30px;
     }
 }

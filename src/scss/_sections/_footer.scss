@@ -1,24 +1,23 @@
 .footer {
-    background-color: #fff;
-    color: #000;
+    background-color: $second-color;
+    color: $third-color;
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
 
     &__container {
-        width: 100%;
 
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
             display: flex;
             justify-content: space-between;
-        }
-
-        @media (min-width: 1024px) {
-            max-width: 1000px;
         }
     }
 
     &__copyright {
         margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
     }
 }

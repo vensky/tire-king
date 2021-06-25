@@ -12,7 +12,7 @@ const typograf = require('gulp-typograf');
 
 const srcPath = 'src/pug/pages/*.pug';
 
-module.exports = function html(env='dev', version) {
+module.exports = function html(env, version) {
     switch (env) {
         case 'dev':
             return multipipe(
