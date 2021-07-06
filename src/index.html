@@ -45,7 +45,7 @@
   </head>
   <body>
     <header class="intro">
-      <section class="header">
+      <div class="header">
         <div class="container container--large header__container">
           <nav class="header__nav header__container-col">
             <div class="lang header__lang"><a class="lang__link lang__link--current" href="/" lang="en">Ru</a><span>/</span><a class="lang__link" href="/en" lang="en">En</a></div><a class="social-link" href="#" target="_blank" rel="noopener">Будь с нами</a>
@@ -60,7 +60,7 @@
             <li><a class="contacts__link" href="email:info@tireking.com?subject=From%20tireking.com">info@tireking.com</a></li>
           </ul>
         </div>
-      </section>
+      </div>
       <div class="container intro__container">
         <div class="intro__title">
           <h1><span class="intro__overtitle">Шиномонтаж нового поколения</span><span lang="en">Tire King</span></h1>
@@ -84,26 +84,27 @@
     </header>
     <main>
       <section class="section slider">
+        <h2 class="section__title slider__title">Наши работы</h2>
         <div class="swiper-container">
           <ul class="swiper-wrapper">
             <li class="swiper-slide">
               <picture>
-                <source srcset="img/slide-4.webp" type="image/webp"><img class="swiper-img" src="img/slide-4.jpg" alt="Ремонт колес">
+                <source srcset="img/slide-4.webp" type="image/webp"><img class="swiper-img" src="img/slide-4.jpg" loading="lazy" alt="Ремонт колес">
               </picture>
             </li>
             <li class="swiper-slide">
               <picture>
-                <source srcset="img/slide-3.webp" type="image/webp"><img class="swiper-img" src="img/slide-3.jpg" alt="Замена колес">
+                <source srcset="img/slide-3.webp" type="image/webp"><img class="swiper-img" src="img/slide-3.jpg" loading="lazy" alt="Замена колес">
               </picture>
             </li>
             <li class="swiper-slide">
               <picture>
-                <source srcset="img/slide-2.webp" type="image/webp"><img class="swiper-img" src="img/slide-2.jpg" alt="Балансировка колес">
+                <source srcset="img/slide-2.webp" type="image/webp"><img class="swiper-img" src="img/slide-2.jpg" loading="lazy" alt="Балансировка колес">
               </picture>
             </li>
             <li class="swiper-slide">
               <picture>
-                <source srcset="img/slide-1.webp" type="image/webp"><img class="swiper-img" src="img/slide-1.jpg" alt="Хранение колес">
+                <source srcset="img/slide-1.webp" type="image/webp"><img class="swiper-img" src="img/slide-1.jpg" loading="lazy" alt="Хранение колес">
               </picture>
             </li>
           </ul>
@@ -125,34 +126,48 @@
           <h2 class="section__title">Какая задача</h2>
           <form class="form task-form">
             <fieldset class="task-form__cols task-form__cols--double">
-              <fieldset class="field task-form__group"><span class="field__label" id="service">Выбирите услугу</span>
-                <div class="field__select">
-                  <select class="field__input" name="service" aria-labelledby="service">
-                    <option>Выберите услугу</option>
-                    <option>Отремонтировать</option>
-                    <option>Заменить</option>
-                    <option>Перебортовать</option>
-                    <option>Отбалансировать</option>
-                    <option>Взять на хранение</option>
+              <fieldset class="field task-form__group select" id="selectTask"><span class="field__label select__label" id="service">Выбирите услугу</span>
+                <div class="select__wrapper">
+                  <select class="field__input select-native" name="service" aria-labelledby="service">
+                    <option value="select" disabled selected>Выберите услугу</option>
+                    <option value="repair">Отремонтировать</option>
+                    <option value="replacement">Заменить</option>
+                    <option value="balance">Отбалансировать</option>
+                    <option value="storage">Взять на хранение</option>
                   </select>
-                  <div class="field__input field__input--select" aria-hidden="true"></div>
+                  <div class="select-custom" aria-hidden="true">
+                    <div class="field__input select-custom__trigger">Выберите услугу</div>
+                    <ul class="select-custom__options">
+                      <li class="select-custom__option" data-value="repair">Отремонтировать</li>
+                      <li class="select-custom__option" data-value="replacement">Заменить</li>
+                      <li class="select-custom__option" data-value="balance">Отбалансировать</li>
+                      <li class="select-custom__option" data-value="storage">Взять на хранение</li>
+                    </ul>
+                  </div>
                 </div>
               </fieldset>
-              <fieldset class="field task-form__group"><span class="field__label" id="deadline">Выбирите услугу</span>
-                <div class="field__select">
-                  <select class="field__input" name="deadline" aria-labelledby="deadline">
-                    <option>Когда нужно</option>
-                    <option>Вчера</option>
-                    <option>Сегодня</option>
-                    <option>Завтра</option>
+              <fieldset class="field task-form__group select" id="selectDeadline"><span class="field__label select__label" id="service">Выбирите услугу</span>
+                <div class="select__wrapper">
+                  <select class="field__input select-native" name="deadline" aria-labelledby="deadline">
+                    <option value="select" disabled selected>Когда нужно</option>
+                    <option value="yesterday">Вчера</option>
+                    <option value="today">Сегодня</option>
+                    <option value="tomorrow">Завтра</option>
                   </select>
-                  <div class="field__input field__input--select" aria-hidden="true"></div>
+                  <div class="select-custom" aria-hidden="true">
+                    <div class="field__input select-custom__trigger">Когда нужно</div>
+                    <ul class="select-custom__options">
+                      <li class="select-custom__option" data-value="yesterday">Вчера</li>
+                      <li class="select-custom__option" data-value="today">Сегодня</li>
+                      <li class="select-custom__option" data-value="tomorrow">Завтра</li>
+                    </ul>
+                  </div>
                 </div>
               </fieldset>
             </fieldset>
             <fieldset class="field task-form__group">
               <label class="field__label" for="textarea">Дополнительная информация</label>
-              <textarea class="field__input field__input--textarea" id="textarea" name="textarea" placeholder="Опишите дополнительную информацию"></textarea>
+              <textarea class="field__input field__input--textarea" id="textarea" name="textarea" placeholder="Опишите дополнительную информацию" spellcheck="true"></textarea>
             </fieldset>
             <fieldset class="task-form__cols task-form__cols--triple">
               <fieldset class="field task-form__group">
@@ -186,7 +201,9 @@
         </div>
       </section>
     </main>
+    <!-- build:js-->
     <script src="js/scripts.js"></script>
+    <!-- endbuild-->
     <footer class="footer">
       <div class="container container--large footer__container">
         <div class="copyright footer__copyright"><b>© 2015 — 2021 Tire King.</b> Шиномонтаж нового поколения</div>

@@ -1,14 +1,17 @@
 {
   "plugins": [
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-order"
   ],
   "extends": [
     "stylelint-config-standard",
+    "stylelint-config-idiomatic-order"
   ],
   "rules": {
     "indentation": 4,
     "at-rule-no-vendor-prefix": true,
     "at-rule-empty-line-before": "always",
+    "at-rule-no-unknown": null,
     "scss/selector-no-redundant-nesting-selector": true,
     "scss/at-import-partial-extension": "never",
     "block-closing-brace-newline-before": "always",
@@ -30,5 +33,8 @@
       "s",
       "deg"
     ]
-  }
+  },
+  "ignoreFiles": [
+        "src/scss/_lib/**/*.scss"
+    ]
 }

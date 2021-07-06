@@ -4,10 +4,11 @@
   "description": "Landing Tire King",
   "main": "index.html",
   "scripts": {
-    "start": "export NODE_ENV=dev npx gulp start",
-    "imgmin": "export NODE_ENV=dev npx gulp img",
-    "test": "export NODE_ENV=test npx gulp test",
+    "start": "export NODE_ENV=dev && npx gulp start",
+    "imgmin": "export NODE_ENV=dev && npx gulp img",
+    "test": "export NODE_ENV=test && npx gulp test",
     "build": "export NODE_ENV=build && npx gulp build",
+    "fix": "npx stylelint 'src/scss/**/*.scss' --fix",
     "prepare": "husky install && npx husky add .husky/\"npm test\""
   },
   "repository": {
@@ -64,7 +65,9 @@
     "lighthouse": "^8.0.0",
     "multipipe": "^4.0.0",
     "stylelint": "^13.13.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.19.0"
   },
   "dependencies": {

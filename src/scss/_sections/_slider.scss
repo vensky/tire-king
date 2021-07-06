@@ -1,5 +1,10 @@
 .slider {
-    padding: 0;
     display: block;
     height: 100vh;
+    padding: 0;
+
+    &__title {
+
+        @include visuallyhidden;
+    }
 }

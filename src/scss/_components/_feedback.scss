@@ -1,12 +1,12 @@
 .feedback {
-    background-image: url("../img/icon-mail.svg");
-    background-size: auto 21px;
-    background-repeat: no-repeat;
     display: inline-block;
     padding-left: 30px;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-size: auto 21px;
     font-size: 14px;
-    text-align: center;
     overflow-wrap: break-word;
+    text-align: center;
     word-wrap: break-word;
 
     &__link {

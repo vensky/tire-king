@@ -1,11 +1,11 @@
 .btn {
-    background-color: $main-color;
-    padding: 4px 10px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: $second-color;
-    font-size: 18px;
     display: block;
     max-width: 280px;
+    padding: 4px 10px;
+    background-color: $main-color;
+    color: $second-color;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
 }

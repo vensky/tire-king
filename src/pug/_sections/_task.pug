@@ -3,29 +3,39 @@ section.section.task#task
         h2.section__title Какая задача
         form.form.task-form
             fieldset.task-form__cols.task-form__cols--double
-                fieldset.field.task-form__group
-                    span.field__label(id="service") Выбирите услугу
-                    div.field__select
-                        select.field__input(name="service" aria-labelledby="service")
-                            option Выберите услугу
-                            option Отремонтировать
-                            option Заменить
-                            option Перебортовать
-                            option Отбалансировать
-                            option Взять на хранение
-                        div(aria-hidden="true").field__input.field__input--select
-                fieldset.field.task-form__group
-                    span.field__label(id="deadline") Выбирите услугу
-                    div.field__select
-                        select.field__input(name="deadline" aria-labelledby="deadline")
-                            option Когда нужно
-                            option Вчера
-                            option Сегодня
-                            option Завтра
-                        div(aria-hidden="true").field__input.field__input--select
+                fieldset.field.task-form__group.select#selectTask
+                    span.field__label.select__label(id="service") Выбирите услугу
+                    div.select__wrapper
+                        select.field__input.select-native(name="service" aria-labelledby="service")
+                            option(value="select" disabled selected) Выберите услугу
+                            option(value="repair") Отремонтировать
+                            option(value="replacement") Заменить
+                            option(value="balance") Отбалансировать
+                            option(value="storage") Взять на хранение
+                        div(aria-hidden="true").select-custom
+                            div.field__input.select-custom__trigger Выберите услугу
+                            ul.select-custom__options
+                                li(data-value="repair").select-custom__option Отремонтировать
+                                li(data-value="replacement").select-custom__option Заменить
+                                li(data-value="balance").select-custom__option Отбалансировать
+                                li(data-value="storage").select-custom__option Взять на хранение
+                fieldset.field.task-form__group.select#selectDeadline
+                    span.field__label.select__label(id="service") Выбирите услугу
+                    div.select__wrapper
+                        select.field__input.select-native(name="deadline" aria-labelledby="deadline")
+                            option(value="select" disabled selected) Когда нужно
+                            option(value="yesterday") Вчера
+                            option(value="today") Сегодня
+                            option(value="tomorrow") Завтра
+                        div(aria-hidden="true").select-custom
+                            div.field__input.select-custom__trigger Когда нужно
+                            ul.select-custom__options
+                                li(data-value="yesterday").select-custom__option Вчера
+                                li(data-value="today").select-custom__option Сегодня
+                                li(data-value="tomorrow").select-custom__option Завтра
             fieldset.field.task-form__group
                 label.field__label(for="textarea") Дополнительная информация
-                textarea.field__input.field__input--textarea(id="textarea" name="textarea" placeholder="Опишите дополнительную информацию")
+                textarea.field__input.field__input--textarea(id="textarea" name="textarea" placeholder="Опишите дополнительную информацию" spellcheck="true")
             fieldset.task-form__cols.task-form__cols--triple
                 fieldset.field.task-form__group
                     label.field__label(for="name") Дополнительная информация
