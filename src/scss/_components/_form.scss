@@ -83,20 +83,23 @@ $field-border: 4px solid $third-color;
     @media (hover: hover) {
         display: block;
     }
-/*    &--active {*/
-/*        .select-custom__trigger {
+
+    /*    &--active { */
+
+    /*        .select-custom__trigger {
 
             @include focus;
 
             &::before {
                 transform: translateY(-50%) rotate(180deg);
             }
-        }*/
+        } */
 
-/*        .select-custom__options {
+    /*        .select-custom__options {
             display: block;
-        }*/
-/*    }*/
+        } */
+
+    /*    } */
     &__trigger {
         position: relative;
         width: 100%;
