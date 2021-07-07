@@ -1,7 +1,7 @@
 .form {
+    color: $third-color;
     font-size: 18px;
     font-weight: 700;
-    color: $third-color;
 
     &__submit {
         width: 100%;
@@ -14,24 +14,26 @@
 $field-border: 4px solid $third-color;
 
 @mixin focus {
-    outline: none;
     box-shadow: white 0 0 0 2px, #ff821f 0 0 0 4px;
+    outline: none;
 }
 
 .field {
     &__label {
+
         @include visuallyhidden;
+
         margin-bottom: 3px;
         color: $third-color;
     }
 
     &__input {
-        background-color: #fff;
         display: block;
         width: 100%;
         min-height: 48px;
         padding: 10px;
         border: $field-border;
+        background-color: #fff;
         line-height: 1.4;
         text-transform: uppercase;
 
@@ -42,6 +44,7 @@ $field-border: 4px solid $third-color;
         }
 
         &:focus {
+
             @include focus;
         }
 
@@ -71,33 +74,29 @@ $field-border: 4px solid $third-color;
 }
 
 .select-custom {
-
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     display: block;
-
-
+    width: 100%;
 
     @media (hover: hover) {
         display: block;
     }
+/*    &--active {*/
+/*        .select-custom__trigger {
 
-    &--active {
-        .select-custom__trigger {
             @include focus;
 
             &::before {
                 transform: translateY(-50%) rotate(180deg);
             }
-        }
+        }*/
 
-        .select-custom__options {
+/*        .select-custom__options {
             display: block;
-        }
-    }
-
+        }*/
+/*    }*/
     &__trigger {
         position: relative;
         width: 100%;
@@ -105,30 +104,43 @@ $field-border: 4px solid $third-color;
         cursor: pointer;
 
         &::before {
-            content: "";
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
             right: 5px;
+            width: 24px;
+            height: 24px;
             background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
             background-repeat: no-repeat;
-            height: 24px;
-            width: 24px;
+            content: "";
+            transform: translateY(-50%);
+        }
+
+        .select-custom--active & {
+
+            @include focus;
+
+            &::before {
+                transform: translateY(-50%) rotate(180deg);
+            }
         }
     }
 
     &__options {
-        background-color: $second-color;
         position: absolute;
+        z-index: 1;
         top: 46px;
         left: 0;
-        width: 100%;
-        z-index: 1;
         display: none;
+        width: 100%;
+        border-right: $field-border;
         border-bottom: $field-border;
         border-left: $field-border;
-        border-right: $field-border;
+        background-color: $second-color;
         text-transform: uppercase;
+
+        .select-custom--active & {
+            display: block;
+        }
     }
 
     &__option {
@@ -137,13 +149,13 @@ $field-border: 4px solid $third-color;
 
         &:hover,
         &--active {
-            color: $second-color;
             background-color: $main-color;
+            color: $second-color;
         }
     }
 }
 
-.select-native:focus+.select-custom {
+.select-native:focus + .select-custom {
 
     @media (hover: hover) {
         display: none;
