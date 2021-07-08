@@ -42,6 +42,7 @@
     <meta name="twitter:description" content="Ремонт колес, замена колес, балансировка, сход-развал, хранение. Быстро. Надежно.">
     <meta name="twitter:image" content="img/logo.png">
     <meta name="twitter:image:alt" content="img/logo.png">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=24851d66-7f75-496a-8ea3-c6fc55bccad1&amp;lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
     <header class="intro">
@@ -146,7 +147,7 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="select task-form__group select" id="selectDeadline"><span class="field__label select__label" id="deadline">Когда нужно</span>
+              <fieldset class="field select task-form__group select" id="selectDeadline"><span class="field__label select__label" id="deadline">Когда нужно</span>
                 <div class="select__wrapper">
                   <select class="field__input select-native" name="deadline" aria-labelledby="deadline">
                     <option value="select" disabled selected>Когда нужно</option>
@@ -204,6 +205,9 @@
             <p class="contacts job__contacts"><a class="contacts__link" href="email:job@tireking.com?subject=From%20tireking.com">job@tireking.com</a></p>
           </div>
         </div>
+      </section>
+      <section class="map section">
+        <div class="map__wrapper" id="map"></div>
       </section>
     </main>
     <!-- build:js-->
