@@ -9,7 +9,7 @@
     "test": "export NODE_ENV=test && npx gulp test",
     "build": "export NODE_ENV=build && npx gulp build",
     "fix-scss": "npx stylelint 'src/scss/**/*.scss' --fix",
-    "fix-js": "npx stylelint 'src/js/**/*.js' --fix",
+    "fix-js": "npx eslint 'src/js/_components/*.js' --fix",
     "prepare": "husky install && npx husky add .husky/\"npm test\""
   },
   "repository": {

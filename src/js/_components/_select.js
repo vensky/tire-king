@@ -12,25 +12,20 @@ const initCustomSelect = (el) => {
         if (didClickedOutside) {
             closeSelectCustom();
         }
-    }
+    };
 
     const openSelectCustom = () => {
         $selectCustom.classList.add('select-custom--active');
         $selectCustom.setAttribute('aria-hidden', false);
-
-        if (optionSelected) {
-
-        }
-
-        document.addEventListener("click", watchClickOutside);
-    }
+        document.addEventListener('click', watchClickOutside);
+    };
 
     const closeSelectCustom = () => {
         $selectCustom.classList.remove('select-custom--active');
         $selectCustom.setAttribute('aria-hidden', true);
 
-        document.removeEventListener("click", watchClickOutside);
-    }
+        document.removeEventListener('click', watchClickOutside);
+    };
 
     const updateSelectOption = (value) => {
         const prevValue = optionSelected;
@@ -48,15 +43,15 @@ const initCustomSelect = (el) => {
         $selectNative.value = value;
         $selectCustomTrigger.textContent = $option.textContent;
         optionSelected = value;
-    }
+    };
 
-    $selectCustomTrigger.addEventListener('click', (e) => {
+    $selectCustomTrigger.addEventListener('click', () => {
         const isSelectClosed = !$selectCustom.classList.contains('select-custom--active');
         isSelectClosed ? openSelectCustom() : closeSelectCustom();
     });
 
     $selectNative.addEventListener('change', (e) => {
-        updateCustomSelectChecked(e.target.value);
+        updateSelectOption(e.target.value);
     });
 
     $selectCustomOptions.addEventListener('click', (e) => {
@@ -65,8 +60,8 @@ const initCustomSelect = (el) => {
         }
 
         closeSelectCustom();
-    })
-}
+    });
+};
 
 const selectTask = document.getElementById('selectTask');
 const selectDeadline = document.getElementById('selectDeadline');

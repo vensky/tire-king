@@ -129,7 +129,6 @@ $field-border: 2px solid $third-color;
     }
 
     &__options {
-        cursor: pointer;
         position: absolute;
         z-index: 1;
         top: 46px;
@@ -140,6 +139,7 @@ $field-border: 2px solid $third-color;
         border-bottom: $field-border;
         border-left: $field-border;
         background-color: $second-color;
+        cursor: pointer;
         text-transform: uppercase;
 
         .select-custom--active & {
