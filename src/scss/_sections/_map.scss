@@ -4,7 +4,7 @@
 
     &__title {
 
-        @mixin visuallyhidden;
+        @include visuallyhidden;
     }
 
     &__wrapper {
