@@ -8,41 +8,8 @@ const initCustomSelect = (el) => {
     let optionSelected = '';
 
     const watchClickOutside = (e) => {
-        const didClickedOutside = !$selectCustom.contains(event.target);
+        const didClickedOutside = !$selectCustom.contains(e.target);
         if (didClickedOutside) {
-            closeSelectCustom();
-        }
-    }
-
-    const supportKeyboardNavigation = (e) => {
-        if (event.keyCode === 40 && optionHoveredIndex < optionsCount - 1) {
-            let index = optionHoveredIndex;
-            e.preventDefault(); // prevent page scrolling
-            updateCustomSelectHovered(optionHoveredIndex + 1);
-        }
-
-        // press up -> go previous
-        if (event.keyCode === 38 && optionHoveredIndex > 0) {
-            e.preventDefault(); // prevent page scrolling
-            updateCustomSelectHovered(optionHoveredIndex - 1);
-        }
-
-        // press Enter or space -> select the option
-        if (event.keyCode === 13 || event.keyCode === 32) {
-            e.preventDefault();
-
-            const option = elSelectCustomOpts.children[optionHoveredIndex];
-            const value = option && option.getAttribute("data-value");
-
-            if (value) {
-                elSelectNative.value = value;
-                updateCustomSelectChecked(value, option.textContent);
-            }
-            closeSelectCustom();
-        }
-
-        // press ESC -> close selectCustom
-        if (event.keyCode === 27) {
             closeSelectCustom();
         }
     }
@@ -56,7 +23,6 @@ const initCustomSelect = (el) => {
         }
 
         document.addEventListener("click", watchClickOutside);
-        document.addEventListener("keydown", supportKeyboardNavigation);
     }
 
     const closeSelectCustom = () => {
@@ -64,15 +30,11 @@ const initCustomSelect = (el) => {
         $selectCustom.setAttribute('aria-hidden', true);
 
         document.removeEventListener("click", watchClickOutside);
-        document.removeEventListener("keydown", supportKeyboardNavigation);
     }
 
-    const updateCustomSelectChecked = (value, text) => {
-        const prevValue = optionChecked;
-
-        const $prevOption = $selectCustomOptions.querySelector(
-            `[data-value="${prevValue}"`
-        );
+    const updateSelectOption = (value) => {
+        const prevValue = optionSelected;
+        const $prevOption = $selectCustomOptions.querySelector(`[data-value="${prevValue}"`);
         const $option = $selectCustomOptions.querySelector(`[data-value="${value}"`);
 
         if ($prevOption) {
@@ -83,44 +45,27 @@ const initCustomSelect = (el) => {
             $option.classList.add('select-custom__option--active');
         }
 
-        $selectCustomTrigger.textContent = text;
-        optionChecked = value;
+        $selectNative.value = value;
+        $selectCustomTrigger.textContent = $option.textContent;
+        optionSelected = value;
     }
 
     $selectCustomTrigger.addEventListener('click', (e) => {
         const isSelectClosed = !$selectCustom.classList.contains('select-custom--active');
-
-        if (isSelectClosed) {
-            openSelectCustom();
-        } else {
-            closeSelectCustom();
-        }
+        isSelectClosed ? openSelectCustom() : closeSelectCustom();
     });
 
     $selectNative.addEventListener('change', (e) => {
-        const value = e.target.value;
-        const $respectiveCustomOption = $selectCustomOpions.querySelectorAll(
-            `[data-value="${value}"]`
-        )[0];
-
-        updateCustomSelectChecked(value, $respectiveCustomOption.textContent);
+        updateCustomSelectChecked(e.target.value);
     });
 
-/*    $selectCustomOptions.children.forEach(function($option, index) {
-        $option.addEventListener('click', (e) => {
-            const value = e.target.getAttribute('data-value');
+    $selectCustomOptions.addEventListener('click', (e) => {
+        if (e.target.dataset.value) {
+            updateSelectOption(e.target.dataset.value);
+        }
 
-            // Sync native select to have the same value
-            $selectNative.value = value;
-            updateCustomSelectChecked(value, e.target.textContent);
-            closeSelectCustom();
-        });
-
-        $option.addEventListener('mouseenter', (e) => {
-            updateCustomSelectHovered(index);
-        });
-
-    });*/
+        closeSelectCustom();
+    })
 }
 
 const selectTask = document.getElementById('selectTask');

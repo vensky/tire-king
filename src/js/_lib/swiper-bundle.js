@@ -1909,12 +1909,12 @@
     swiper.virtualSize = -spaceBetween; // reset margins
 
     if (rtl) slides.css({
-      marginLeft: '',
-      marginTop: ''
-    });else slides.css({
-      marginRight: '',
-      marginBottom: ''
-    });
+            marginLeft: '',
+            marginTop: ''
+        });else slides.css({
+            marginRight: '',
+            marginBottom: ''
+        });
     var slidesNumberEvenToRows;
 
     if (params.slidesPerColumn > 1) {
@@ -1953,12 +1953,12 @@
           column = slideIndexInGroup - row * columnsInGroup + groupIndex * params.slidesPerGroup;
           newSlideOrderIndex = column + row * slidesNumberEvenToRows / slidesPerColumn;
           slide.css({
-            '-webkit-box-ordinal-group': newSlideOrderIndex,
-            '-moz-box-ordinal-group': newSlideOrderIndex,
-            '-ms-flex-order': newSlideOrderIndex,
-            '-webkit-order': newSlideOrderIndex,
-            order: newSlideOrderIndex
-          });
+                        'webkitBoxOrdinalGroup': newslideorderindex,
+                        'mozBoxOrdinalGroup': newslideorderindex,
+                        'msFlexOrder': newslideorderindex,
+                        'webkitOrder': newslideorderindex,
+                        order: newslideorderindex
+                    });
         } else if (params.slidesPerColumnFill === 'column') {
           column = Math.floor(i / slidesPerColumn);
           row = i - column * slidesPerColumn;
@@ -2064,8 +2064,8 @@
 
     if (rtl && wrongRTL && (params.effect === 'slide' || params.effect === 'coverflow')) {
       $wrapperEl.css({
-        width: swiper.virtualSize + params.spaceBetween + "px"
-      });
+                width: swiper.virtualsize + params.spacebetween + "px"
+            });
     }
 
     if (params.setWrapperSize) {
@@ -9154,8 +9154,8 @@
 
         var slideOpacity = swiper.params.fadeEffect.crossFade ? Math.max(1 - Math.abs($slideEl[0].progress), 0) : 1 + Math.min(Math.max($slideEl[0].progress, -1), 0);
         $slideEl.css({
-          opacity: slideOpacity
-        }).transform("translate3d(" + tx + "px, " + ty + "px, 0px)");
+                    opacity: slideopacity
+                }).transform("translate3d(" + tx + "px, " + ty + "px, 0px)");
       }
     },
     setTransition: function setTransition(duration) {
@@ -9246,8 +9246,8 @@
           }
 
           $cubeShadowEl.css({
-            height: swiperWidth + "px"
-          });
+                        height: swiperwidth + "px"
+                    });
         } else {
           $cubeShadowEl = $el.find('.swiper-cube-shadow');
 
@@ -9332,11 +9332,11 @@
       }
 
       $wrapperEl.css({
-        '-webkit-transform-origin': "50% 50% -" + swiperSize / 2 + "px",
-        '-moz-transform-origin': "50% 50% -" + swiperSize / 2 + "px",
-        '-ms-transform-origin': "50% 50% -" + swiperSize / 2 + "px",
-        'transform-origin': "50% 50% -" + swiperSize / 2 + "px"
-      });
+                'webkitTransformOrigin': "50% 50% -" + swipersize / 2 + "px",
+                'mozTransformOrigin': "50% 50% -" + swipersize / 2 + "px",
+                'msTransformOrigin': "50% 50% -" + swipersize / 2 + "px",
+                'transformOrigin': "50% 50% -" + swipersize / 2 + "px"
+            });
 
       if (params.shadow) {
         if (isHorizontal) {

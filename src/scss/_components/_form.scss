@@ -11,7 +11,7 @@
     }
 }
 
-$field-border: 4px solid $third-color;
+$field-border: 2px solid $third-color;
 
 @mixin focus {
     box-shadow: white 0 0 0 2px, #ff821f 0 0 0 4px;
@@ -129,6 +129,7 @@ $field-border: 4px solid $third-color;
     }
 
     &__options {
+        cursor: pointer;
         position: absolute;
         z-index: 1;
         top: 46px;
