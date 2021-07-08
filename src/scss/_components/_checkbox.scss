@@ -1,0 +1,36 @@
+.checkbox {
+    &__label {
+        position: relative;
+        display: block;
+        padding-top: 4px;
+        padding-left: 36px;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            border: $field-border;
+            margin-right: 10px;
+            background-color: $second-color;
+            box-shadow: inset 0 0 0 3px $second-color;
+            content: "";
+        }
+
+        &::after {
+            position: absolute;
+            top: 50%;
+        }
+    }
+
+    input[type="checkbox"] {
+
+        @include visuallyhidden;
+
+        &:checked + .checkbox__label::before {
+            background-color: $third-color;
+        }
+    }
+}

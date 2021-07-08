@@ -4,11 +4,17 @@
 
 @import "_vars";
 
+@import "_mixins";
+
 @import "_lib/_swiper";
 
 @import "_base";
 
 @import "_components/_btn";
+
+@import "_components/_select";
+
+@import "_components/_checkbox";
 
 @import "_components/_form";
 

@@ -39,6 +39,7 @@ module.exports = function html(env, version) {
                 src(srcPath),
                 pug(),
                 replace({
+                    edit: `<body>`,
                     css: `css/style.min-v${version}.css`,
                     js: `js/scripts.min-v${version}.js`,
                 }),

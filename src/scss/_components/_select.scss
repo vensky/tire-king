@@ -1,76 +1,8 @@
-.form {
-    color: $third-color;
-    font-size: 18px;
-    font-weight: 700;
-
-    &__submit {
-        width: 100%;
-        max-width: 280px;
+.select {
+    &__wrapper {
+        position: relative;
         min-height: 48px;
-        margin: 0 auto;
     }
-}
-
-$field-border: 2px solid $third-color;
-
-@mixin focus {
-    box-shadow: white 0 0 0 2px, #ff821f 0 0 0 4px;
-    outline: none;
-}
-
-.field {
-    &__label {
-
-        @include visuallyhidden;
-
-        margin-bottom: 3px;
-        color: $third-color;
-    }
-
-    &__input {
-        display: block;
-        width: 100%;
-        min-height: 48px;
-        padding: 10px;
-        border: $field-border;
-        background-color: #fff;
-        line-height: 1.4;
-        text-transform: uppercase;
-
-        &::-webkit-input-placeholder {
-            font-size: 16px;
-            font-weight: 400;
-            text-transform: none;
-        }
-
-        &:focus {
-
-            @include focus;
-        }
-
-        &--textarea {
-            min-height: 96px;
-
-            @media (min-width: $tablet) {
-                min-height: 240px;
-            }
-        }
-    }
-
-    &__message {
-        margin-top: 3px;
-        color: red;
-        font-size: 0.8em;
-        text-align: center;
-
-        &--hidden {
-            display: none;
-        }
-    }
-}
-
-.select__wrapper {
-    position: relative;
 }
 
 .select-custom {

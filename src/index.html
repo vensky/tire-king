@@ -126,7 +126,7 @@
           <h2 class="section__title">Какая задача</h2>
           <form class="form task-form">
             <fieldset class="task-form__cols task-form__cols--double">
-              <fieldset class="field task-form__group select" id="selectTask"><span class="field__label select__label" id="service">Выбирите услугу</span>
+              <fieldset class="field select task-form__group" id="selectTask"><span class="field__label select__label" id="service">Выбирите услугу</span>
                 <div class="select__wrapper">
                   <select class="field__input select-native" name="service" aria-labelledby="service">
                     <option value="select" disabled selected>Выберите услугу</option>
@@ -146,7 +146,7 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="field task-form__group select" id="selectDeadline"><span class="field__label select__label" id="deadline">Когда нужно</span>
+              <fieldset class="select task-form__group select" id="selectDeadline"><span class="field__label select__label" id="deadline">Когда нужно</span>
                 <div class="select__wrapper">
                   <select class="field__input select-native" name="deadline" aria-labelledby="deadline">
                     <option value="select" disabled selected>Когда нужно</option>
@@ -186,7 +186,12 @@
                 <div class="field__message field__message--hidden" id="field__message--email">Введите эл.почту</div>
               </fieldset>
             </fieldset>
-            <button class="btn form__submit task-form__submit" type="button">Отправить</button>
+            <fieldset class="field checkbox task-form__group">
+              <input id="checkbox" name="checkbox" type="checkbox" required>
+              <label class="checkbox__label" for="checkbox">Я согласен с обработкой персональных данных</label>
+              <div class="field__message field__message--hidden" id="field__message--agree">Нужно согласие</div>
+            </fieldset>
+            <button class="btn form__submit task-form__submit" type="submit">Отправить</button>
           </form>
         </div>
       </section>

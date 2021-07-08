@@ -3,7 +3,7 @@ section.section.task#task
         h2.section__title Какая задача
         form.form.task-form
             fieldset.task-form__cols.task-form__cols--double
-                fieldset.field.task-form__group.select#selectTask
+                fieldset.field.select.task-form__group#selectTask
                     span.field__label.select__label(id="service") Выбирите услугу
                     div.select__wrapper
                         select.field__input.select-native(name="service" aria-labelledby="service")
@@ -19,7 +19,7 @@ section.section.task#task
                                 li(data-value="replacement").select-custom__option Заменить
                                 li(data-value="balance").select-custom__option Отбалансировать
                                 li(data-value="storage").select-custom__option Взять на хранение
-                fieldset.field.task-form__group.select#selectDeadline
+                fieldset.field.select.task-form__group.select#selectDeadline
                     span.field__label.select__label(id="deadline") Когда нужно
                     div.select__wrapper
                         select.field__input.select-native(name="deadline" aria-labelledby="deadline")
@@ -49,4 +49,8 @@ section.section.task#task
                     label.field__label(for="email") Дополнительная информация
                     input.field__input(id="email" name="email" type="email" placeholder="Эл. почта" aria-describedby="field__message--email")
                     div.field__message.field__message--hidden#field__message--email Введите эл.почту
-            button.btn.form__submit.task-form__submit(type="button") Отправить
+            fieldset.field.checkbox.task-form__group
+                input(id="checkbox" name="checkbox" type="checkbox" required)
+                label.checkbox__label(for="checkbox") Я согласен с обработкой персональных данных
+                div.field__message.field__message--hidden#field__message--agree Нужно согласие
+            button.btn.form__submit.task-form__submit(type="submit") Отправить
